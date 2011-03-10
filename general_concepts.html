@@ -8,8 +8,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
     <title>2. Machine Learning 101 &mdash; scikit-learn tutorial v0.1 documentation</title>
-    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
@@ -19,10 +19,10 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <link rel="shortcut icon" href="static/favicon.ico"/>
     <link rel="top" title="scikit-learn tutorial v0.1 documentation" href="index.html" />
     <link rel="next" title="3. Working with text data" href="working_with_text_data.html" />
     <link rel="prev" title="1. Tutorial setup" href="setup.html" /> 
@@ -31,7 +31,7 @@
     <div class="header-wrapper">
       <div class="header">
           <p class="logo"><a href="index.html">
-            <img src="_static/scikit-learn-logo-small.png" alt="Logo"/>
+            <img src="static/scikit-learn-logo-small.png" alt="Logo"/>
           </a>
           </p><div class="navbar">
           <ul>
@@ -123,7 +123,7 @@ to make computer learn to behave more intelligently by somehow
 <strong>generalizing</strong> rather that just storing and retrieving data items
 like a database system would do.</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/decision_boundary2.png"><img alt="_images/decision_boundary2.png" src="_images/decision_boundary2.png" style="width: 256.0px; height: 200.5px;" /></a>
+<a class="reference internal image-reference" href="images/decision_boundary3.png"><img alt="images/decision_boundary3.png" src="images/decision_boundary3.png" style="width: 256.0px; height: 200.5px;" /></a>
 <p class="caption">Decision boundary learned from data points from two categories:
 white and black</p>
 </div>
@@ -166,7 +166,7 @@ in memory.</p>
 were each row in the database (or CSV file) is a set of measurements
 of an individual iris flower.</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/Virginia_Iris3.png"><img alt="Photo of Iris Virginia" src="_images/Virginia_Iris3.png" style="width: 200.0px; height: 162.0px;" /></a>
+<a class="reference internal image-reference" href="images/Virginia_Iris4.png"><img alt="Photo of Iris Virginia" src="images/Virginia_Iris4.png" style="width: 200.0px; height: 162.0px;" /></a>
 <p class="caption">Iris Virginia (source: Wikipedia)</p>
 </div>
 <p>Each sample in this dataset is described by 4 features and can
@@ -328,7 +328,7 @@ will be presented in the last sections of this tutorial.</p>
 <div class="section" id="supervised-learning-model-fit-x-y">
 <h2>2.2. Supervised Learning: <tt class="docutils literal"><span class="pre">model.fit(X,</span> <span class="pre">y)</span></tt><a class="headerlink" href="#supervised-learning-model-fit-x-y" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/supervised3.png"><img alt="Flow diagram for supervised learning" src="_images/supervised3.png" style="width: 517.5px; height: 317.25px;" /></a>
+<a class="reference internal image-reference" href="images/supervised4.png"><img alt="Flow diagram for supervised learning" src="images/supervised4.png" style="width: 517.5px; height: 317.25px;" /></a>
 <p class="caption">Supervised Learning overview</p>
 </div>
 <p>A supervised learning algorithm makes the distinction between the
@@ -414,7 +414,7 @@ calls on the previous flow diagram. The <tt class="docutils literal"><span class
 used for feature extractor that is not used in the case of the iris
 data which already comes as vectors of features:</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/supervised_scikit_learn3.png"><img alt="Flow diagram for supervised learning with scikit-learn" src="_images/supervised_scikit_learn3.png" style="width: 513.75px; height: 363.0px;" /></a>
+<a class="reference internal image-reference" href="images/supervised_scikit_learn4.png"><img alt="Flow diagram for supervised learning with scikit-learn" src="images/supervised_scikit_learn4.png" style="width: 513.75px; height: 363.0px;" /></a>
 <p class="caption">Supervised Learning with scikit-learn</p>
 </div>
 <p>Some <tt class="docutils literal"><span class="pre">scikit-learn</span></tt> classifiers can further predicts probabilities
@@ -547,7 +547,7 @@ Stochastic Gradient Descent</td>
 <div class="section" id="unsupervised-learning-model-fit-x">
 <h2>2.3. Unsupervised Learning: <tt class="docutils literal"><span class="pre">model.fit(X)</span></tt><a class="headerlink" href="#unsupervised-learning-model-fit-x" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/unsupervised3.png"><img alt="Flow diagram for unsupervised learning" src="_images/unsupervised3.png" style="width: 522.0px; height: 302.25px;" /></a>
+<a class="reference internal image-reference" href="images/unsupervised4.png"><img alt="Flow diagram for unsupervised learning" src="images/unsupervised4.png" style="width: 522.0px; height: 302.25px;" /></a>
 <p class="caption">Unsupervised Learning overview</p>
 </div>
 <p>An unsupervised learning algorithm only uses a single set of
@@ -627,7 +627,7 @@ following utility function:</p>
 <p>Calling <tt class="docutils literal"><span class="pre">plot_2D(X_pca,</span> <span class="pre">iris.target,</span> <span class="pre">iris.target_names)</span></tt> will
 display the following:</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/iris_pca_2d3.png"><img alt="2D PCA projection of the iris dataset" src="_images/iris_pca_2d3.png" style="width: 520.0px; height: 390.0px;" /></a>
+<a class="reference internal image-reference" href="images/iris_pca_2d4.png"><img alt="2D PCA projection of the iris dataset" src="images/iris_pca_2d4.png" style="width: 520.0px; height: 390.0px;" /></a>
 <p class="caption">2D PCA projection of the iris dataset</p>
 </div>
 <div class="admonition note">
@@ -689,7 +689,7 @@ with:</p>
 </pre></div>
 </div>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/iris_pca_2d_kmeans3.png"><img alt="KMeans cluster assignements on 2D PCA iris data" src="_images/iris_pca_2d_kmeans3.png" style="width: 520.0px; height: 390.0px;" /></a>
+<a class="reference internal image-reference" href="images/iris_pca_2d_kmeans4.png"><img alt="KMeans cluster assignements on 2D PCA iris data" src="images/iris_pca_2d_kmeans4.png" style="width: 520.0px; height: 390.0px;" /></a>
 <p class="caption">KMeans cluster assignements on 2D PCA iris data</p>
 </div>
 <div class="section" id="notable-implementations-of-clustering-models">
@@ -770,12 +770,12 @@ The accurracy of the model is displayed on stdout.</li>
 perflectly separate the two classes while the other is not linearly
 separable (a model with a gaussian kernel is required in that case).</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/linearly_separable_data3.png"><img alt="_images/linearly_separable_data3.png" src="_images/linearly_separable_data3.png" style="width: 489.75px; height: 455.25px;" /></a>
+<a class="reference internal image-reference" href="images/linearly_separable_data4.png"><img alt="images/linearly_separable_data4.png" src="images/linearly_separable_data4.png" style="width: 489.75px; height: 455.25px;" /></a>
 <p class="caption">Linear Support Vector Machine trained to perflectly separate 2
 sets of data points labeled as white and black in a 2D space.</p>
 </div>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/non_linearly_separable_data3.png"><img alt="_images/non_linearly_separable_data3.png" src="_images/non_linearly_separable_data3.png" style="width: 490.5px; height: 456.0px;" /></a>
+<a class="reference internal image-reference" href="images/non_linearly_separable_data4.png"><img alt="images/non_linearly_separable_data4.png" src="images/non_linearly_separable_data4.png" style="width: 490.5px; height: 456.0px;" /></a>
 <p class="caption">Support Vector Machine with gaussian kernel trained to separate
 2 sets of data points labeled as white and black in a 2D space.
 This dataset would not have been seperated by a simple linear
