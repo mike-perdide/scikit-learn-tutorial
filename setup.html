@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. Tutorial setup &mdash; scikit-learn tutorial v0.1 documentation</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="scikit-learn tutorial v0.1 documentation" href="index.html" />
+    <link rel="next" title="2. Machine Learning 101" href="general_concepts.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="index.html" /> 
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img src="_static/scikit-learn-logo-small.png" alt="Logo"/>
+          </a>
+          </p><div class="navbar">
+          <ul>
+            <li><a href="http://github.com/scikit-learn/scikit-learn-tutorial">Source of this tutorial</a></li>
+            <li><a href="http://scikit-learn.sourceforge.net">Documentation for scikit-learn</a></li>
+       </ul>
+
+
+       </div> <!-- end navbar --></div>
+    </div>
+
+    <div class="content-wrapper">
+
+    <!-- <div id="blue_tile"></div> -->
+
+        <div class="sphinxsidebar">
+        <div class="rel">
+          <a href="index.html" title="&lt;no title&gt;"
+             accesskey="P">previous</a> |
+          <a href="general_concepts.html" title="2. Machine Learning 101"
+             accesskey="N">next</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+        
+
+        <h3>Contents</h3>
+         <ul>
+<li><a class="reference internal" href="#">1. Tutorial setup</a><ul>
+<li><a class="reference internal" href="#install-scikit-learn-0-7">1.1. Install scikit-learn 0.7</a></li>
+<li><a class="reference internal" href="#download-the-datasets">1.2. Download the datasets</a></li>
+</ul>
+</li>
+</ul>
+
+
+      </div>
+
+      <div class="content">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="tutorial-setup">
+<h1>1. Tutorial setup<a class="headerlink" href="#tutorial-setup" title="Permalink to this headline">¶</a></h1>
+<p>The following assumes you have extracted the source distribution
+of this tutorial somewhere on your local disk. Alternatively you
+can use git to clone this repo directly from github onto your
+local disk.</p>
+<p>In the following we will name this folder <tt class="docutils literal"><span class="pre">$TUTORIAL_HOME</span></tt>. It
+should contain the following folders:</p>
+<blockquote>
+<div><ul class="simple">
+<li><tt class="docutils literal"><span class="pre">tutorial</span></tt> - the source of the tutorial document written with sphinx</li>
+<li><tt class="docutils literal"><span class="pre">data</span></tt> - folder to put the datasets used during the tutorial</li>
+<li><tt class="docutils literal"><span class="pre">skeletons</span></tt> - sample incomplete scripts for the exercices</li>
+<li><tt class="docutils literal"><span class="pre">solutions</span></tt> - solutions of the exercices</li>
+</ul>
+</div></blockquote>
+<p>You can aleardy copy the skeletons into a new folder named <tt class="docutils literal"><span class="pre">workspace</span></tt>
+where you will edit your own files for the exercices while keeping
+the original skeletons intact:</p>
+<div class="highlight-python"><pre>% cp -r skeletons workspace</pre>
+</div>
+<div class="section" id="install-scikit-learn-0-7">
+<h2>1.1. Install scikit-learn 0.7<a class="headerlink" href="#install-scikit-learn-0-7" title="Permalink to this headline">¶</a></h2>
+<p>Please refer to the <a class="reference external" href="http://scikit-learn.sourceforge.net/install.html">scikit-learn install</a> page for per-system instructions.</p>
+<p>You must have <tt class="docutils literal"><span class="pre">numpy</span></tt>, <tt class="docutils literal"><span class="pre">scipy</span></tt> and <tt class="docutils literal"><span class="pre">matplotlib</span></tt> installed first.</p>
+<p>Here are the instructions to install the 0.7 release from source
+on a POSIX system (e.g. Linux and MacOSX). First download the release
+archive and extract it <strong>in the folder next to $TUTORIAL_HOME</strong>:</p>
+<div class="highlight-python"><pre>% wget http://pypi.python.org/packages/source/s/scikits.learn/scikits.learn-0.7.tar.gz
+% tar zxvf scikits.learn-0.7.tar.gz
+% cd scikits.learn-0.7</pre>
+</div>
+<p>You can then build it locally and add it to your PYTHONPATH environment
+variable:</p>
+<div class="highlight-python"><pre>% python setup.py build_ext -i
+% export PYTHONPATH=`pwd`</pre>
+</div>
+<p>If you want to install the library globally, do the following instead:</p>
+<div class="highlight-python"><pre>% python setup.py build
+% sudo python setup.py install</pre>
+</div>
+<p>Whatever the installation procedure you should check that the &#8216;0.7&#8217; version is
+active in your python path:</p>
+<div class="highlight-python"><pre>% python -c "import scikits.learn; print scikits.learn.__version__"
+0.7</pre>
+</div>
+<p>You should also be able to launch the tests from anywhere in the system
+(if nose is installed) with the following:</p>
+<div class="highlight-python"><pre>% python -c "import scikits.learn as skl; skl.test()"</pre>
+</div>
+<p>The output should end with <tt class="docutils literal"><span class="pre">OK</span></tt> as in:</p>
+<div class="highlight-python"><pre>----------------------------------------------------------------------
+Ran 623 tests in 26.108s
+
+OK (SKIP=2)</pre>
+</div>
+<p>In the rest of the tutorial, the path to the extracted archive folder
+<tt class="docutils literal"><span class="pre">scikits.learn-0.7</span></tt> will be named <tt class="docutils literal"><span class="pre">$SKL_HOME</span></tt>.</p>
+</div>
+<div class="section" id="download-the-datasets">
+<h2>1.2. Download the datasets<a class="headerlink" href="#download-the-datasets" title="Permalink to this headline">¶</a></h2>
+<p>Machine Learning algorithms need data. Go to each <tt class="docutils literal"><span class="pre">$TUTORIAL_HOME/data</span></tt>
+sub-folder and run the <tt class="docutils literal"><span class="pre">fetch_data.py</span></tt> script from there (after
+having read them first).</p>
+<p>For instance:</p>
+<div class="highlight-python"><pre>% cd $TUTORIAL_HOME/data/languages
+% less fetch_data.py
+% python fetch_data.py</pre>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+        <p style="text-align: center">This documentation is relative
+        to scikit-learn tutorial version 0.1<p>
+        &copy; 2010, scikits.learn developers (BSD License).
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7. Design by <a href="http://webylimonada.com">Web y Limonada</a>.
+    </div>
+  </body>
+</html>
